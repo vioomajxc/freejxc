@@ -1,0 +1,63 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="lotus-search-form layui-form layui-col-space5" method="get" action="selectgoodsListJson">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                            <select class="layui-select" name="contact" lay-filter="hc_select" autocomplete="off" lay-search>
+                        <option value="">选择供应商</option>
+                        {volist name='supplier' id='vo'}
+                            <option value="{$vo.id}">{$vo.supplier_name}</option>
+                        {/volist}
+                    </select>
+                        </div>
+                        </div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input type="text" name="goodsname" placeholder="请输入商品名" autocomplete="off" class="layui-input"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <a class="layui-btn lotus-search-btn" lay-submit="" lay-filter="search">
+                                <i class="layui-icon">&#xe615;</i></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-filter="lotus-table" lay-data="{page:true,limits:[20,50,100],loading:true,toolbar:'#toolbarTpl',url:'selectgoodsListJson?or_id={$or_id}',hash:''}"  class="layui-table layui-hide">
+                        <thead>
+                            <tr>
+                                <th lay-data="{field:'id',type:'checkbox',fixed:'left'}"></th>
+                                <th lay-data="{field:'id', sort: true,width:'9%',align:'center'}">ID</th>
+                                <th lay-data="{field:'goodsname'}">商品名</th>
+                                <th lay-data="{field:'unit',width:'8%',align:'center'}">单位</th>
+                                <th lay-data="{field:'spec',width:'15%'}">规格</th>
+                                <th lay-data="{field:'id',fixed:'right',templet: '#actionTpl',width:'12%',align:'center'}">操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <script type="text/html" id="toolbarTpl">
+                        <div class = "layui-btn-container" >
+                            <button class="layui-btn layui-btn-sm" lay-event="addBatchGoods"><i class="layui-icon"></i>选择并关闭</button>
+                        </div >
+                    </script>
+                    <script type="text/html" id="actionTpl">
+                        <button onclick="lotus.selectSingle('{{d.id}}','{$or_id}','/admin/pub/selectsingleGoods?ordertype={$ordertype}')" class="layui-btn layui-btn-danger layui-btn-xs">选择</button>
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.lotus-search-btn').on('click',function () {
+        var where = {
+            contact:$('select[name=contact]').val(),
+            goodsname:$('input[name=goodsname]').val(),
+        };
+        lotus.table(where);
+    })
+</script>
+{/block}

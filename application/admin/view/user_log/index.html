@@ -1,0 +1,50 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="layui-form layui-col-space8" id="ajaxForm" method="get" >
+                        <div class="layui-inline layui-show-xs-block">
+                            <input class="layui-input" autocomplete="off" placeholder="开始日" name="start" id="start"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input class="layui-input" autocomplete="off" placeholder="截止日" name="end" id="end"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" class="layui-input"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <a class="layui-btn lotus-search-btn"  lay-filter="search">
+                                <i class="layui-icon">&#xe615;</i></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-data="{page:true,limits:[10,50,100],loading:true,toolbar:'#toolbarDemo',url:'userLogListJson',hash:''}"  class="layui-table layui-hide" >
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'id', width:80, sort: true}">ID</th>
+                            <th lay-data="{field:'username'}">用户</th>
+                            <th lay-data="{field:'name'}">动作</th>
+                            <th lay-data="{field:'url'}">路由</th>
+                            <th lay-data="{field:'ip'}">IPV4地址</th>
+                            <th lay-data="{field:'create_time'}">创建时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.lotus-search-btn').on('click',function () {
+        var where = {
+            start:$('input[name=start]').val(),
+            username:$('input[name=username]').val(),
+            end:$('input[name=end]').val(),
+        };
+        lotus.table(where);
+    })
+</script>
+{/block}

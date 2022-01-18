@@ -1,0 +1,73 @@
+<!-- 左侧菜单开始 -->
+<div class="left-nav">
+    <div id="side-nav">
+        <ul id="nav">
+            {foreach name="menu" item="vo"}
+            {if condition="isset($vo['children'])"}
+            <li>
+                <a href="javascript:;">
+                    {if condition="!empty($vo['icon'])"}
+                    <i class="layui-icon {$vo.icon}"></i>
+                    {else/}
+                    <i class="layui-icon"></i>
+                    {/if}
+                    <!-- <i class="iconfont">&#xe620;</i> -->
+                    <cite>{$vo.title}</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    {foreach name="vo['children']" item="v"}
+                    {if condition="isset($v['children'])"}
+                    <li>
+                        <a  onclick="xadmin.add_tab('{$v.title}','{:url($v.name)}')">
+                            {if condition="empty($v['icon'])"}
+                            <i class="layui-icon">&#xe602;</i>
+                            {else/}
+                            <i class="layui-icon {$vo.icon}"></i>
+                            {/if}
+                            <cite> {$v.title}</cite>
+                            <i class="iconfont nav_right">&#xe697;</i>
+                        </a>
+                        <ul class="sub-menu">
+                            {foreach name="v['children']" item="vs"}
+                            <li>
+                                <a _href="{:url($vs.name)}">
+                                    <i class="layui-icon">&#xe63f;</i>
+                                    <cite> {$vs.title}</cite>
+
+                                </a>
+                            </li >
+                            {/foreach}
+                        </ul>
+                    </li>
+                    {else/}
+                    <li>
+                        <a  onclick="xadmin.add_tab('{$v.title}','{:url($v.name)}')">
+                            <i class="layui-icon">&#xe63f;</i>
+                            <cite> {$v.title}</cite>
+                        </a>
+                    </li>
+                    {/if}
+                    </li >
+                    {/foreach}
+                </ul>
+            </li>
+            {else /}
+            <li>
+                <a   onclick="xadmin.add_tab('{$vo.title}','{:url($vo.name)}')"_>
+                    {if condition="!empty($vo['icon'])"}
+                    <i class="layui-icon {$vo.icon}"></i>
+                    {else/}
+                    <i class="layui-icon"></i>
+                    {/if}
+                    <cite>{$vo.title}</cite>
+                    <!--<i class="iconfont nav_right">&#xe697;</i>-->
+                </a>
+            </li >
+            {/if}
+            {/foreach}
+        </ul>
+    </div>
+</div>
+<!-- <div class="x-slide_left"></div> -->
+<!-- 左侧菜单结束 -->

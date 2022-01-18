@@ -1,0 +1,75 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane" id="lotus-add-form" action="addStorehouse" method="post">
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    所属门店
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="shop" lay-verify="required">
+                        <option value="">所属门店</option>
+                        {volist name='shop' id='vo'}
+                            <option value="{$vo.id}">{$vo.shop_name}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">仓库名称</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="house_name" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    是否启用
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="status">
+                        <option value="1">启用</option>
+                        <option value="0">禁止</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    POS仓库
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="pos">
+                        <option value="1">启用</option>
+                        <option value="0">禁止</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">仓库简介</label>
+                <div class="layui-input-block">
+                    <textarea  name="comment" style="height:120px;" class="layui-input"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 30%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+{/block}
+
+
+
+

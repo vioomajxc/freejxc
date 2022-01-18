@@ -1,0 +1,58 @@
+{include file='pub/head'}
+<body>
+<form class="layui-form" lay-filter="lotus-form-filter" id="lotus-edit-form" action="payMent" method="post">
+<input type="hidden" name="memberid" value="{$memberid}">
+<input type="hidden" name="pay_type" value="cash">
+<input type="hidden" name="cardno" value="{$cardno}">
+<input type="hidden" name="cardmoney" id="cardmoney" value="{$cardmoney}">
+<input type="hidden" name="addmoney" id="addmoney" value="{$addmoney}">
+<div class="layui-row">
+    <table class="info_Table" width="100%">
+        <tr>
+            <th>会员名称：</th>
+            <td>{$members.member_name}</td>
+        </tr>
+        <tr>
+            <th>会员身份证：</th>
+            <td>{$members.member_card}</td>
+        </tr>
+        <tr>
+            <th>会员电话：</th>
+            <td>{$members.member_phone}</td>
+        </tr>
+        <tr>
+            <th>充值金额：</th>
+            <td>￥{$cardmoney|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>赠送金额：</th>
+            <td>￥{$addmoney|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>总金额：</th>
+            <td style="font:bold 14px Arial;color:#f00;">￥{$cardmoney+$addmoney|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>会员卡号：</th>
+            <td>{$cardno}</td>
+        </tr>
+        <tr>
+            <th>结算金额：</th>
+            <td><input type="text" class="layui-input" lay-verify="required" style="width:150px;" name="payed" id="payed" value="{$cardmoney}" readonly="true"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><button class="layui-btn" lay-submit lay-filter="toSubmit">结 账</button></td>
+        </tr>
+    </table>
+</div>
+</form>
+
+<script>
+    $('#payed').focus();
+</script>
+</body>
+{include file='pub/foot'}
+
+
+

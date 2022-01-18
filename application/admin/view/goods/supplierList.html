@@ -1,0 +1,62 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-data="{page:true,limits:[10,20,100],loading:true,toolbar:'#toolbarDemo',url:'supplierListJson',hash:''}"  class="layui-table layui-hide" >
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'id', sort: true,width:'8%',align:'center'}">ID</th>
+                            <th lay-data="{field:'supplier_name'}">供应商名称</th>
+                            <th lay-data="{field:'supplier_director',width:'10%',align:'center'}">联系人</th>
+                            <th lay-data="{field:'supplier_phone',width:'12%',align:'center'}">联系电话</th>
+                            <th lay-data="{field:'status',templet:'#statusTpl',width:'10%',align:'center'}">状态</th>
+                            <th lay-data="{'width':'180',field:'id',templet:'#actionTpl',width:'15%'}">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+                    <script type="text/html" id="toolbarDemo">
+                        <div class = "layui-btn-container" >
+                            <button class="layui-btn layui-btn-sm" onclick="xadmin.open('添加供应商','addSupplier.html')"><i class="layui-icon"></i>添加</button>
+                        </div >
+                    </script>
+                    <script type="text/html" id="actionTpl">
+                        <button onclick="xadmin.open('编辑供应商','editSupplier.html?id={{d.id}}')" class="layui-btn  layui-btn-xs">编辑</button>
+                        <button onclick="lotus.del('{{d.id}}','0','delSupplier')" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
+                    </script>
+                    <script type="text/html" id="statusTpl">
+                      <input type='checkbox' name='status' lay-skin='switch' value="{{d.id}}" lay-filter='status' lay-text='正常|禁止'  {{ d.status == 1 ? 'checked' : '' }}>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('table', function(){
+  var table = layui.table
+  ,form = layui.form;
+    form.on('switch(status)', function(obj){
+    if(obj.elem.checked)
+        status=1;
+    else
+        status=0;
+    $.ajax({
+            url: "/admin/goods/supplier_status.html",
+            type: 'post',
+            dataType: 'json',
+            data:{status:status,id:this.value},
+        })
+            .done(function(data){
+                    if(data.code==1){
+                        layer.msg(data.msg,{icon:1,time:500});
+                            layui.table.reload('lotus-table');
+                    }
+                })
+  });
+})
+</script>
+{/block}

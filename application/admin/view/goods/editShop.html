@@ -1,0 +1,82 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane"  lay-filter="lotus-form-filter" id="lotus-edit-form" action="editShop" method="post">
+
+            <input type="hidden" name="id">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">店铺名称</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="shop_name" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">负责人</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="shop_director" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系电话</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="shop_phone" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系地址</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="shop_address" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    是否启用
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="status">
+                        <option value="1">启用</option>
+                        <option value="0">禁止</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">店铺简介</label>
+                <div class="layui-input-block">
+                    <textarea  name="comment" style="height:80px;" class="layui-input"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 30%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script>
+    var lotusFormVal = {
+        'id':"{$data.id}",
+        'shop_name':"{$data.shop_name}",
+        "shop_director":"{$data.shop_director}",
+        "shop_phone":"{$data.shop_phone}",
+        "shop_address":"{$data.shop_address}",
+        'status':"{$data.status}",
+        'comment':"{$data.comment}"
+    }
+    lotus.editForm(lotusFormVal);
+</script>
+{/block}
+
+
+
+

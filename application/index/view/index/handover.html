@@ -1,0 +1,76 @@
+{include file='pub/head'}
+<body>
+<form class="layui-form" lay-filter="lotus-form-filter" id="lotus-edit-form" action="handOver" method="post">
+<input type="hidden" name="hand_cash" value="{$moneys[1]}">
+<input type="hidden" name="hand_wechat" value="{$moneys[2]}">
+<input type="hidden" name="hand_alipay" value="{$moneys[3]}">
+<div class="layui-row">
+    <table class="info_Table" width="100%">
+        <tr>
+            <th>店铺：</th>
+            <td style="color:#F00;">{$shopname}</td>
+            <th>收银员：</th>
+            <td>{$userinfo.fullname}</td>
+        </tr>
+        <tr>
+            <th>开始时间：</th>
+            <td>{$userinfo.last_login_time}</td>
+            <th>结束时间：</th>
+            <td>{$handover_time}</td>
+        </tr>
+        <tr>
+            <td width="50%" colspan="2">
+                <table width='100%'>
+                    <tr>
+            <td colspan="2" style="text-align:center"><b>当班收入：</b></td>
+        </tr>
+        {volist name='channels' id='vo' key='k'}
+        <tr>
+            <th>{$channel[$k-1]}：</th>
+            <td>￥{$vo|number_format=2}</td>
+        </tr>
+        {/volist}
+                </table>
+            </td>
+            <td colspan="2">
+                <table width='100%'>
+                    <tr>
+            <td colspan="2" style="text-align:center"><b>会员充值：</b></td>
+        </tr>
+        {volist name='comes' id='vo' key='k'}
+        <tr>
+            <th>{$channel[$k-1]}：</th>
+            <td>￥{$vo|number_format=2}</td>
+        </tr>
+        {/volist}
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th>今日新增会员数：</th>
+            <td>{$member_count}</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align:right;font-weight:bold;padding-right:30px;">现金总收入：￥{$moneys[1]|number_format=2}&nbsp;&nbsp;微信总收入：￥{$moneys[2]|number_format=2}&nbsp;&nbsp;支付宝总收入：￥{$moneys[3]|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>钱箱留存现金：</th>
+            <td><input type="text" class="layui-input" lay-verify="required" style="width:150px;" name="hand_keep" id="cash" value="0"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><button class="layui-btn" lay-submit lay-filter="toSubmit">交 接</button></td>
+        </tr>
+    </table>
+</div>
+</form>
+
+<script>
+    $('#cash').focus();
+</script>
+</body>
+{include file='pub/foot'}
+
+
+

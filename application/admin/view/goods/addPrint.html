@@ -1,0 +1,94 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane" id="lotus-add-form" action="addPrint" method="post">
+            <input type="hidden" name="print_shop" value="{$id}">
+            <div class="layui-form-item">
+                <label class="layui-form-label">店铺名称</label>
+                <div class="layui-input-block">
+                    <span style="margin-left:20px;height:40px;line-height: 40px;">{$shop_name}</span>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">打印机名称</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="print_name" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">序列号SN</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="print_sn" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">打印机Key</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="print_key" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    打印机品牌
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="print_brand" lay-verify="required">
+                        <option value="">请选择打印机品牌</option>
+                        <option value="1">飞鹅打印机</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    是否启用
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="print_status">
+                        <option value="1">启用</option>
+                        <option value="0">禁止</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">打印模板</label>
+                <div class="layui-input-block">
+                    <textarea  name="print_mould" style="height:80px;" class="layui-input"><CB>{SHOP_NAME}</CB><BR><BR>
+下单时间：{CREATE_TIME}<BR>
+订单号：{ORDER_ID}<BR>
+-------------------------------<BR>
+名称　　　　　 单价  数量 金额<BR>
+-------------------------------<BR>
+{ITEM_LIST}
+--------------------------------<BR>
+备注：{COMMENT}<BR>
+合计：{MONEY}元<BR>
+--------------------------------<BR>
+店铺地址：{SHOP_ADDRESS}<BR>';
+店铺电话：{SHOP_PHONE}<BR>';
+<QR>http://www.viooma.com</QR>
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 30%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+{/block}
+
+
+
+

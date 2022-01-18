@@ -1,0 +1,120 @@
+.layui-table-body{overflow-x: hidden;width: 102%; }
+.orderid{
+	height:40px;
+	padding-top:15px;
+	border-bottom:1px solid #999;
+}
+.skuTpl{
+	position: fixed;
+	width:30%;
+	bottom:0px;
+	height:50px;
+	border-top:1px solid #ddd;
+	line-height:50px;
+}
+.goods_pal_title{
+	font-weight:bold;
+}
+.posTool span{
+	font:bold 14px 黑体;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.posTool{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px dotted #999;
+}
+.shop{
+	font:bold 22px 黑体;
+}
+.member-table{
+	border:0px;
+}
+.member-table tr{
+	height:22px;
+}
+.pay-btn A{
+	display:block;
+	width:100%;
+	height:60px;
+	line-height:60px;
+	text-indent:50%;
+	font:normal 14px 黑体;
+	padding-top:22px;
+}
+.toolbar{
+	position: fixed;
+	top:0;
+	right:0;
+	background:#FFF;
+	height:100%;
+}
+.toolbar A{
+	display:block;
+	height:40px;
+	text-align:center;
+	font:bold 14px 黑体;
+	margin:5px auto;
+	background:#2F4056;
+	line-height:40px;
+	overflow: hidden;
+}
+.toolbar A:hover{
+	background:#393D49;
+	color:#FFF;
+}
+.goods_pal_body A:hover{
+	display:block;
+	color:#FF5722;
+}
+.pay-coupon,.pay-card,.pay-cash,.pay-alipay,.pay-wechat,.pay-bank,.pay-baidu,.pay-tuan{
+	height:60px;
+}
+.pay-wechat{
+	background:url(../images/pay.png) no-repeat 20px 12px;
+}
+.pay-coupon{
+	background:url(../images/pay.png) no-repeat 20px -156px;
+}
+.pay-baidu{
+	background:url(../images/pay.png) no-repeat 20px -30px;
+}
+.pay-card{
+	background:url(../images/pay.png) no-repeat 20px -193px;
+}
+.pay-cash{
+	background:url(../images/pay.png) no-repeat 20px -233px;
+}
+.pay-alipay{
+	background:url(../images/pay.png) no-repeat 20px -72px;
+}
+.pay-bank{
+	background:url(../images/pay.png) no-repeat 20px -116px;
+}
+.pay-tuan{
+	background:url(../images/pay.png) no-repeat 20px -326px;
+}
+.goods_pal{
+	background:#5FB878;
+}
+.goods_title{
+	overflow: hidden;
+}
+.goods_pal .price{
+	color:#FFF;
+	font-size:14px;
+}
+.info_Table tr th{
+	height:22px;
+	text-align:right;
+}
+.info_Table td{
+	padding:10px;
+}
+.money{
+	font:bold 26px Arial;
+	text-align:center;
+	color:#FF5722;
+}

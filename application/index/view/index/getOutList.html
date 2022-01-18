@@ -1,0 +1,56 @@
+{include file='pub/head'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-filter="lotus-table" class="layui-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>订单号</th>
+                                <th>下单时间</th>
+                                <th>经手人</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {volist name="lists" id="vo"}
+                            <tr>
+                                <td>{$vo.id}</td>
+                                <td>{$vo.or_id}</td>
+                                <td>{$vo.or_create_time|date="Y-m-d h:i:s"}</td>
+                                <td>{$vo.or_user}</td>
+                                <td><button onclick="selectSingle('{$vo.id}}','/index/index/getOutList')" class="layui-btn layui-btn-danger layui-btn-xs">选择</button></td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function selectSingle(id,route){
+        $.ajax({
+                url: route,
+                type: 'post',
+                dataType: 'json',
+                data: {id:id},
+            })
+                .done(function(data){
+                    if(data.code==0){
+                        layer.msg(data.msg,{icon:5,time:500});
+                    }else{
+                        var index = layer.load();
+                            layer.msg(data.msg,{icon:1,time:500},function(){
+                            parent.location.reload();
+                            layer.close(index);
+                        })
+                    }
+                })
+    }
+</script>
+{include file='pub/foot'}

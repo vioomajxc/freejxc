@@ -1,0 +1,15 @@
+2020-01-13 19:49:14  {"scene":"bar_code","out_trade_no":"PS_20200113-1-41","total_amount":"1","auth_code":"288743062301494446","timeout_express":"5m","subject":"唯马收银系统","body":"PS_20200113-1-41支付宝付款"}
+2020-01-13 19:51:32  {"scene":"bar_code","out_trade_no":"PS_20200113-1-41","total_amount":"1","auth_code":"288743062301494446","timeout_express":"5m","subject":"唯马收银系统","body":"PS_20200113-1-41支付宝付款"}
+2020-01-13 19:51:37  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:51:40  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:51:43  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:51:47  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:51:50  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:51:53  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:51:56  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:52:00  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:52:03  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 19:52:03  {"out_trade_no":"PS_20200113-1-41"}
+2020-01-13 20:42:59  {"scene":"bar_code","out_trade_no":"PS_20200113-1-41","total_amount":"1","auth_code":"288604172262480557","timeout_express":"5m","subject":"唯马收银系统","body":"PS_20200113-1-41支付宝付款"}
+2020-01-13 20:49:22  {"scene":"bar_code","out_trade_no":"PS_20200113-1-42","total_amount":"1","auth_code":"281612855270781325","timeout_express":"5m","subject":"唯马收银系统","body":"PS_20200113-1-42支付宝付款"}
+2020-01-17 20:58:25  {"scene":"bar_code","out_trade_no":"CZ1579265905","total_amount":"1","auth_code":"282510566178871196","timeout_express":"5m","subject":"唯马收银系统","body":"6901028193498支付宝充值"}

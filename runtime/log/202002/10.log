@@ -1,0 +1,386 @@
+---------------------------------------------------------------
+
+[2020-02-10T12:38:52+08:00] ::1 GET localhost:93/install
+[运行时间：0.099906s] [吞吐率：10.01req/s] [内存消耗：2,219.10kb] [文件加载：73]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\application\install\\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/install',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'host' => 'localhost:93',
+  'cookie' => 'PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\install\view\\index.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T12:38:52+08:00] ::1 GET localhost:93/favicon.ico
+[运行时间：0.062873s] [吞吐率：15.91req/s] [内存消耗：1,587.24kb] [文件加载：59]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-02-10T12:38:54+08:00] ::1 GET localhost:93/install/index/step2.html
+[运行时间：0.223829s] [吞吐率：4.47req/s] [内存消耗：2,228.85kb] [文件加载：72]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\application\install\\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/install/index/step2.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/install',
+  'host' => 'localhost:93',
+  'cookie' => 'PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\install\view\\step2.html [ array (
+  0 => 'phpversion',
+  1 => 'os',
+  2 => 'pdo',
+  3 => 'pdo_mysql',
+  4 => 'curl',
+  5 => 'gd',
+  6 => 'mbstring',
+  7 => 'upload_size',
+  8 => 'session',
+  9 => 'always_populate_raw_post_data',
+  10 => 'folders',
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T12:38:56+08:00] ::1 GET localhost:93/install/index/step3.html
+[运行时间：0.071385s] [吞吐率：14.01req/s] [内存消耗：2,258.14kb] [文件加载：72]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\application\install\\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/install/index/step3.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/install/index/step2.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\install\view\\step3.html [ array (
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T12:39:06+08:00] ::1 GET localhost:93/admin/index/index.html
+[运行时间：0.131548s] [吞吐率：7.60req/s] [内存消耗：3,481.95kb] [文件加载：82]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/index.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/login/login',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\admin\view\index\index.html [ array (
+  0 => 'site_config',
+  1 => 'theme',
+  2 => 'menu',
+  3 => 'controller',
+  4 => 'action',
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T12:39:06+08:00] ::1 GET localhost:93/admin/index/welcome.html
+[运行时间：0.230546s] [吞吐率：4.34req/s] [内存消耗：4,131.59kb] [文件加载：90]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/welcome.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/index.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\admin\view\index\welcome.html [ array (
+  0 => 'site_config',
+  1 => 'theme',
+  2 => 'menu',
+  3 => 'controller',
+  4 => 'action',
+  5 => 'first_line',
+  6 => 'second_line',
+  7 => 'topData',
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T12:39:07+08:00] ::1 GET localhost:93/admin/index/memberchart.html
+[运行时间：0.144712s] [吞吐率：6.91req/s] [内存消耗：3,062.02kb] [文件加载：74]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/memberchart.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/welcome.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+---------------------------------------------------------------
+
+[2020-02-10T12:39:07+08:00] ::1 GET localhost:93/admin/index/orderchart.html?cycle=thirtyday
+[运行时间：0.191259s] [吞吐率：5.23req/s] [内存消耗：3,680.50kb] [文件加载：84]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/orderchart.html?cycle=thirtyday',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/welcome.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=i3jqg02jp3i4m0d8npl081l53b; pmaUser-1=%7B%22iv%22%3A%22olfbGQt9Uxwm0H9z0x0fGg%3D%3D%22%2C%22mac%22%3A%2289666e225a6061fb7c954607c984d4b2b0358b0d%22%2C%22payload%22%3A%22Pr21TKMS9T1xHR%2BEhwU6EQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22f9IlpjVStmwS6kBY16d2Cg%3D%3D%22%2C%22mac%22%3A%22c55a21a6c6e15a3c6c55f1f2d6e4c3b2989b81a2%22%2C%22payload%22%3A%22AY38QwPbyS5eOGkZYFTf7ZXW1jC3CpSZqyUKW3RQ744%3D%22%7D; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'cycle' => 'thirtyday',
+)
+[ info ] [ DB ] INIT mysql
+---------------------------------------------------------------
+
+[2020-02-10T17:08:13+08:00] ::1 GET localhost:93/admin/index/index.html
+[运行时间：0.927252s] [吞吐率：1.08req/s] [内存消耗：3,324.64kb] [文件加载：80]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/index.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/login/login',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=kgoeauh946k4qqvmn8mmjacol7; pmaUser-1=%7B%22iv%22%3A%22GwpiNM065NFIPIt1WdO4zA%3D%3D%22%2C%22mac%22%3A%2219d3f784761481fa30478fe01de8e85317e9dd17%22%2C%22payload%22%3A%22IrudXASgcXyBLBWgAs4Yjw%3D%3D%22%7D; thinkphp_show_page_trace=0|0; _csrf_name_f618e644=f9200c4bd14b1e4efdf15f157bde370d; _csrf_name_f618e644__ckMd5=78c835024911ef4b; pmaAuth-1=%7B%22iv%22%3A%22iqWWtMG82jaZoYmL08nU8A%3D%3D%22%2C%22mac%22%3A%226121523cfbc750f4a8dfa3185ac3185f80f4f013%22%2C%22payload%22%3A%22Q8FqJdbPfqhzgOVRGRbuEoUKj6P6MlZ2j8Vr0e6%5C%2F0Ck%3D%22%7D; _csrf_name_329998b0=f7e87222f36819cae424e2e41eab9f1d; _csrf_name_329998b0__ckMd5=b05d56f45e0d7c1b; DedeUserID=1; DedeUserID__ckMd5=0b30db4c37dc78fc; DedeLoginTime=1581324363; DedeLoginTime__ckMd5=e0e936890549e455; ENV_GOBACK_URL=%2Fdede%2Fcontent_list.php; lastCid=1; lastCid__ckMd5=0b30db4c37dc78fc',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\admin\view\index\index.html [ array (
+  0 => 'site_config',
+  1 => 'theme',
+  2 => 'menu',
+  3 => 'controller',
+  4 => 'action',
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T17:08:14+08:00] ::1 GET localhost:93/admin/index/welcome.html
+[运行时间：0.367870s] [吞吐率：2.72req/s] [内存消耗：3,930.90kb] [文件加载：88]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/welcome.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/index.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=kgoeauh946k4qqvmn8mmjacol7; pmaUser-1=%7B%22iv%22%3A%22GwpiNM065NFIPIt1WdO4zA%3D%3D%22%2C%22mac%22%3A%2219d3f784761481fa30478fe01de8e85317e9dd17%22%2C%22payload%22%3A%22IrudXASgcXyBLBWgAs4Yjw%3D%3D%22%7D; thinkphp_show_page_trace=0|0; _csrf_name_f618e644=f9200c4bd14b1e4efdf15f157bde370d; _csrf_name_f618e644__ckMd5=78c835024911ef4b; pmaAuth-1=%7B%22iv%22%3A%22iqWWtMG82jaZoYmL08nU8A%3D%3D%22%2C%22mac%22%3A%226121523cfbc750f4a8dfa3185ac3185f80f4f013%22%2C%22payload%22%3A%22Q8FqJdbPfqhzgOVRGRbuEoUKj6P6MlZ2j8Vr0e6%5C%2F0Ck%3D%22%7D; _csrf_name_329998b0=f7e87222f36819cae424e2e41eab9f1d; _csrf_name_329998b0__ckMd5=b05d56f45e0d7c1b; DedeUserID=1; DedeUserID__ckMd5=0b30db4c37dc78fc; DedeLoginTime=1581324363; DedeLoginTime__ckMd5=e0e936890549e455; ENV_GOBACK_URL=%2Fdede%2Fcontent_list.php; lastCid=1; lastCid__ckMd5=0b30db4c37dc78fc',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\admin\view\index\welcome.html [ array (
+  0 => 'site_config',
+  1 => 'theme',
+  2 => 'menu',
+  3 => 'controller',
+  4 => 'action',
+  5 => 'first_line',
+  6 => 'second_line',
+  7 => 'topData',
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T17:08:15+08:00] ::1 GET localhost:93/admin/index/memberchart.html
+[运行时间：0.264572s] [吞吐率：3.78req/s] [内存消耗：3,063.40kb] [文件加载：74]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/memberchart.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/welcome.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=kgoeauh946k4qqvmn8mmjacol7; pmaUser-1=%7B%22iv%22%3A%22GwpiNM065NFIPIt1WdO4zA%3D%3D%22%2C%22mac%22%3A%2219d3f784761481fa30478fe01de8e85317e9dd17%22%2C%22payload%22%3A%22IrudXASgcXyBLBWgAs4Yjw%3D%3D%22%7D; thinkphp_show_page_trace=0|0; _csrf_name_f618e644=f9200c4bd14b1e4efdf15f157bde370d; _csrf_name_f618e644__ckMd5=78c835024911ef4b; pmaAuth-1=%7B%22iv%22%3A%22iqWWtMG82jaZoYmL08nU8A%3D%3D%22%2C%22mac%22%3A%226121523cfbc750f4a8dfa3185ac3185f80f4f013%22%2C%22payload%22%3A%22Q8FqJdbPfqhzgOVRGRbuEoUKj6P6MlZ2j8Vr0e6%5C%2F0Ck%3D%22%7D; _csrf_name_329998b0=f7e87222f36819cae424e2e41eab9f1d; _csrf_name_329998b0__ckMd5=b05d56f45e0d7c1b; DedeUserID=1; DedeUserID__ckMd5=0b30db4c37dc78fc; DedeLoginTime=1581324363; DedeLoginTime__ckMd5=e0e936890549e455; ENV_GOBACK_URL=%2Fdede%2Fcontent_list.php; lastCid=1; lastCid__ckMd5=0b30db4c37dc78fc',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+---------------------------------------------------------------
+
+[2020-02-10T17:08:17+08:00] ::1 GET localhost:93/admin/index/orderchart.html?cycle=thirtyday
+[运行时间：0.240380s] [吞吐率：4.16req/s] [内存消耗：3,681.63kb] [文件加载：84]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/index/orderchart.html?cycle=thirtyday',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/welcome.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=kgoeauh946k4qqvmn8mmjacol7; pmaUser-1=%7B%22iv%22%3A%22GwpiNM065NFIPIt1WdO4zA%3D%3D%22%2C%22mac%22%3A%2219d3f784761481fa30478fe01de8e85317e9dd17%22%2C%22payload%22%3A%22IrudXASgcXyBLBWgAs4Yjw%3D%3D%22%7D; thinkphp_show_page_trace=0|0; _csrf_name_f618e644=f9200c4bd14b1e4efdf15f157bde370d; _csrf_name_f618e644__ckMd5=78c835024911ef4b; pmaAuth-1=%7B%22iv%22%3A%22iqWWtMG82jaZoYmL08nU8A%3D%3D%22%2C%22mac%22%3A%226121523cfbc750f4a8dfa3185ac3185f80f4f013%22%2C%22payload%22%3A%22Q8FqJdbPfqhzgOVRGRbuEoUKj6P6MlZ2j8Vr0e6%5C%2F0Ck%3D%22%7D; _csrf_name_329998b0=f7e87222f36819cae424e2e41eab9f1d; _csrf_name_329998b0__ckMd5=b05d56f45e0d7c1b; DedeUserID=1; DedeUserID__ckMd5=0b30db4c37dc78fc; DedeLoginTime=1581324363; DedeLoginTime__ckMd5=e0e936890549e455; ENV_GOBACK_URL=%2Fdede%2Fcontent_list.php; lastCid=1; lastCid__ckMd5=0b30db4c37dc78fc',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'application/json, text/plain, */*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'cycle' => 'thirtyday',
+)
+[ info ] [ DB ] INIT mysql
+---------------------------------------------------------------
+
+[2020-02-10T17:08:22+08:00] ::1 GET localhost:93/admin/report/financial.html
+[运行时间：0.461286s] [吞吐率：2.17req/s] [内存消耗：4,316.48kb] [文件加载：96]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/report/financial.html',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/index/index.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=kgoeauh946k4qqvmn8mmjacol7; pmaUser-1=%7B%22iv%22%3A%22GwpiNM065NFIPIt1WdO4zA%3D%3D%22%2C%22mac%22%3A%2219d3f784761481fa30478fe01de8e85317e9dd17%22%2C%22payload%22%3A%22IrudXASgcXyBLBWgAs4Yjw%3D%3D%22%7D; thinkphp_show_page_trace=0|0; _csrf_name_f618e644=f9200c4bd14b1e4efdf15f157bde370d; _csrf_name_f618e644__ckMd5=78c835024911ef4b; pmaAuth-1=%7B%22iv%22%3A%22iqWWtMG82jaZoYmL08nU8A%3D%3D%22%2C%22mac%22%3A%226121523cfbc750f4a8dfa3185ac3185f80f4f013%22%2C%22payload%22%3A%22Q8FqJdbPfqhzgOVRGRbuEoUKj6P6MlZ2j8Vr0e6%5C%2F0Ck%3D%22%7D; _csrf_name_329998b0=f7e87222f36819cae424e2e41eab9f1d; _csrf_name_329998b0__ckMd5=b05d56f45e0d7c1b; DedeUserID=1; DedeUserID__ckMd5=0b30db4c37dc78fc; DedeLoginTime=1581324363; DedeLoginTime__ckMd5=e0e936890549e455; ENV_GOBACK_URL=%2Fdede%2Fcontent_list.php; lastCid=1; lastCid__ckMd5=0b30db4c37dc78fc',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\vioomajxc\application\admin\view\report\financial.html [ array (
+  0 => 'site_config',
+  1 => 'theme',
+  2 => 'menu',
+  3 => 'controller',
+  4 => 'action',
+  5 => '',
+  6 => 'where',
+  7 => 'trans',
+  8 => 'orderCount',
+  9 => 'orderDays',
+  10 => 'header',
+  11 => 'Statistic',
+  12 => 'ordinary',
+  13 => 'pink',
+  14 => 'recharge',
+  15 => 'data',
+  16 => 'seckill',
+  17 => 'price',
+) ]
+---------------------------------------------------------------
+
+[2020-02-10T17:08:22+08:00] ::1 GET localhost:93/admin/report/{__FRAME_PATH}js/content.min.js?v=1.0.0
+[运行时间：0.248662s] [吞吐率：4.02req/s] [内存消耗：3,163.58kb] [文件加载：80]
+[ info ] [ LANG ] D:\wamp\www\vioomajxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/admin/report/{__FRAME_PATH}js/content.min.js?v=1.0.0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0',
+  'referer' => 'http://localhost:93/admin/report/financial.html',
+  'host' => 'localhost:93',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=85cvadh5ptm70126q3hqjq58p3; pma_lang=zh_CN; phpMyAdmin=kgoeauh946k4qqvmn8mmjacol7; pmaUser-1=%7B%22iv%22%3A%22GwpiNM065NFIPIt1WdO4zA%3D%3D%22%2C%22mac%22%3A%2219d3f784761481fa30478fe01de8e85317e9dd17%22%2C%22payload%22%3A%22IrudXASgcXyBLBWgAs4Yjw%3D%3D%22%7D; thinkphp_show_page_trace=0|0; _csrf_name_f618e644=f9200c4bd14b1e4efdf15f157bde370d; _csrf_name_f618e644__ckMd5=78c835024911ef4b; pmaAuth-1=%7B%22iv%22%3A%22iqWWtMG82jaZoYmL08nU8A%3D%3D%22%2C%22mac%22%3A%226121523cfbc750f4a8dfa3185ac3185f80f4f013%22%2C%22payload%22%3A%22Q8FqJdbPfqhzgOVRGRbuEoUKj6P6MlZ2j8Vr0e6%5C%2F0Ck%3D%22%7D; _csrf_name_329998b0=f7e87222f36819cae424e2e41eab9f1d; _csrf_name_329998b0__ckMd5=b05d56f45e0d7c1b; DedeUserID=1; DedeUserID__ckMd5=0b30db4c37dc78fc; DedeLoginTime=1581324363; DedeLoginTime__ckMd5=e0e936890549e455; ENV_GOBACK_URL=%2Fdede%2Fcontent_list.php; lastCid=1; lastCid__ckMd5=0b30db4c37dc78fc',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'v' => '1.0.0',
+)
+[ info ] [ DB ] INIT mysql

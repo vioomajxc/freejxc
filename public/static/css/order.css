@@ -1,0 +1,10 @@
+.ui-icon-ellipse{backgroud:url(../images/icon-select.gif) 50% 50% no-repeat #FFF;}
+.ui-icon-ellipse{border: 1px solid red;
+    right: 10px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;}

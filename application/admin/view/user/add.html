@@ -1,0 +1,75 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane" id="lotus-add-form" action="addUser" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    用户角色
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="group_id" id='group_id'>
+                        {volist name='auth_group' id='vo'}
+                        <option value="{$vo.id}">{$vo.title}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    所属店铺
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="shop" id='shop'>
+                        <option value="0">后台管理员</option>
+                        {volist name='shops' id='vo'}
+                        <option value="{$vo.id}">{$vo.shop_name}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" id="username"  name="username" lay-verify="required|username" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">密&nbsp;&nbsp;&nbsp;码</label>
+                <div class="layui-input-block">
+                    <input type="password" id="password"  name="password" lay-verify="required|pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">确&nbsp;&nbsp;&nbsp;认</label>
+                <div class="layui-input-block">
+                    <input type="password"  id="check_password"  name="check_password" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">邮&nbsp;&nbsp;&nbsp;箱</label>
+                <div class="layui-input-block">
+                    <input type="text" id="email" name="email" lay-verify="required|email" placeholder="请输入注册邮箱" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 20%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+{/block}
+
+
+
+

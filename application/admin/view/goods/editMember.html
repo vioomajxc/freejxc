@@ -1,0 +1,101 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane"  lay-filter="lotus-form-filter" id="lotus-edit-form" action="editMember" method="post">
+
+            <input type="hidden" name="id">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">客户名称</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="member_name" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">客户代码</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="member_code" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">客户简称</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="member_sname" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">分&nbsp;&nbsp;&nbsp;类</label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="member_category">
+                        <option value="0">顶级分类</option>
+                        {volist name='mcategory' id='vo'}
+                            <option value="{$vo.id}">{$vo.level-1|str_repeat='丨--',###}{$vo.mcategory_name}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">联系地址</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="member_address" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">网站</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="member_site" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    是否启用
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="member_status">
+                        <option value="1">启用</option>
+                        <option value="0">禁止</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">客户简介</label>
+                <div class="layui-input-block">
+                    <textarea  name="comment" style="height:80px;" class="layui-input"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 30%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script>
+    var lotusFormVal = {
+        'id':"{$data.id}",
+        'member_name':"{$data.member_name}",
+        "member_code":"{$data.member_code}",
+        "member_sname":"{$data.member_sname}",
+        "member_site":"{$data.member_site}",
+        "member_category":"{$data.member_category}",
+        "member_address":"{$data.member_address}",
+        'member_status':"{$data.member_status}",
+        'comment':"{$data.comment}"
+    }
+    lotus.editForm(lotusFormVal);
+</script>
+{/block}
+
+
+
+

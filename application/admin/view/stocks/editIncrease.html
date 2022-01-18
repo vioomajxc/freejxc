@@ -1,0 +1,136 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <form class="layui-form layui-col-space8" method="post" id="lotus-edit-form" action="editIncrease?verify_status_old={$verify_status}" lay-filter="lotus-form-filter">
+                        <div class="layui-row">
+                            <div class="layui-inline">
+                            <label class="layui-form-label">订单号：</label>
+                            <div class="layui-input-inline" style="width:180px;">
+                            <input type="text" name="or_id" autocomplete="off" class="layui-input" readonly="readonly">
+                        </div>
+                    </div>
+                            
+                        <div class="layui-inline">
+                            <label class="layui-form-label">仓库：</label>
+                        <div class="layui-input-inline" style="width:120px;">
+                            <select name="or_house" lay-verify="required">
+                        <option value="">选择仓库</option>
+                        {volist name='house' id='vo'}
+                            <option value="{$vo.id}">{$vo.house_name}</option>
+                        {/volist}
+                    </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                            <label class="layui-form-label">操作员：</label>
+                            <div class="layui-input-inline" style="width:120px;">
+                            <select class="layui-select" name="or_user" lay-filter="hc_select" autocomplete="off" lay-search lay-verify="required">
+                        <option value="">操作员</option>
+                        {volist name='user' id='vo'}
+                            <option value="{$vo.username}">{$vo.fullname}</option>
+                        {/volist}
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="layui-row">  
+                        
+                        <div class="layui-inline">
+                            <label class="layui-form-label">日期：</label>
+                        <div class="layui-input-inline" style="width:120px;">
+                            <input class="layui-input" autocomplete="off" placeholder="订单日期" name="or_create_time" id="start">
+                        </div>
+                    </div>
+
+                    <div class="layui-inline">
+                            <label class="layui-form-label">审核：</label>
+                            <div class="layui-input-inline" style="width:120px;">
+                                <select class="layui-input" autocomplete="off" name="or_verify_status">
+                                    <option value="">审核状态</option>
+                                    <option value="1">审核</option>
+                                    <option value="0">未审核</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-inline">
+                            <button style="margin-left: 80%" class="layui-btn" lay-submit="" lay-filter="toSubmit">保存订单</button>
+                        </div>
+                        </div>
+                          
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-block">
+                            <label class="layui-form-label">备注：</label>
+                            <div class="layui-input-block">
+                                <input class="layui-input" autocomplete="off" name="or_comment">
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                    </form>
+                </div>
+
+                <div class="layui-card-body layui-table-body layui-table-main layui-col-md12">
+                    <table id="lotus-table" lay-filter="lotus-table"  lay-data="{page:true,limits:[20,50,100],loading:true,toolbar:'#toolbarDemo',url:'/admin/pub/ItemJson?or_id={$or_id}',hash:'',totalRow:true,done:function(res){
+var sumTotal=0;//统计金额
+layui.each(res.data,function(index,d){
+sumTotal+=d.it_number * d.it_price;
+})
+this.elem.next().find('.layui-table td[data-field=sum] .layui-table-cell:last').text(sumTotal.toFixed(2))
+}}"  class="layui-table layui-hide" >
+                        <thead>
+                            <tr>
+                                <th lay-data="{field:'id',fixed: 'left',unresize:true,sort: true,totalRowText:'合计',width:'8%',align:'center'}">ID</th>
+                                <th lay-data="{field:'goodsname'}">商品名</th>
+                                <th lay-data="{field:'unit',width:'8%',align:'center'}">单位</th>
+                                <th lay-data="{field:'spec',width:'16%',align:'center'}">规格</th>
+                                <th lay-data="{field:'it_number',totalRow:true,width:'10%',align:'center'}">数量</th>
+                                <th lay-data="{field:'it_price',width:'10%',align:'center'}">单价</th>
+                                <th lay-data="{field:'sum',totalRow:true,templet:function(d){
+                                return (d.it_number*d.it_price).toFixed(2);
+                            },width:'10%'}">金额</th>
+                                <th lay-data="{'width':'10%',field:'id',fixed:'right',templet:'#actionTpl'}">操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <script type="text/html" id="toolbarDemo">
+                        <div class = "layui-btn-container" >
+                            {{# if({$orders.or_verify_status} == 0){  }}
+                            <button class="layui-btn layui-btn-sm" onclick="xadmin.open('选择要添加的商品','/admin/pub/selectGoods.html?or_id={$or_id}&ordertype=increase',780,520)"><i class="layui-icon"></i>选择商品</button>
+                            {{# } }}
+                        </div >
+                    </script>
+                    <script type="text/html" id="actionTpl">
+                        {{# if({$orders.or_verify_status} == 0){  }}
+                        <button onclick="lotus.del('{{d.id}}','0','/admin/pub/delitemGoods')" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
+                        {{# } }}
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var lotusFormVal = {
+        'or_id':"{$or_id}",
+        'or_user':"{$orders.or_user}",
+        'or_contact':"{$orders.or_contact}",
+        'or_house':"{$orders.or_house}",
+        'or_house1':"{$orders.or_house1}",
+        'or_verify_status':"{$orders.or_verify_status}",
+        'or_verify_status_old':"{$orders.or_verify_status}",
+        'or_delivery_id':"{$orders.or_delivery_id}",
+        'or_comment':"{$orders.or_comment}",
+        'or_create_time':"{$orders.or_create_time}"
+    }
+    lotus.editForm(lotusFormVal);
+</script>
+{/block}

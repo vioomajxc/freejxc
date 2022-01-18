@@ -1,0 +1,76 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane" id="lotus-add-form" action="addRule" method="post">
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    上级权限
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="pid">
+                        <option value="0">顶级权限</option>
+                        {volist name='auth' id='vo'}
+                            <option value="{$vo.id}">{$vo.level-1|str_repeat='丨--',###}{$vo.title}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">权限名称</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="title" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">路由</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="name" lay-verify="required"  placeholder="例如:admin/user/userList"  value=""  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    用户角色
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="status">
+                        <option value="1">显示</option>
+                        <option value="0">隐藏</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label"><a target="_blank" href="https://www.layui.com/doc/element/icon.html#table">图标(点)</a></label>
+                <div class="layui-input-block">
+                    <input type="text"    name="icon"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">排序权重</label>
+                <div class="layui-input-block">
+                    <input type="number"    value="0"  name="sort" lay-verify="required"  autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 30%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+{/block}
+
+
+
+

@@ -1,0 +1,72 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+
+                <div class="layui-card-body ">
+                    <form class="lotus-search-form layui-form layui-col-space5" method="get" action="stocksListJson">
+                        <div class="layui-inline layui-show-xs-block">
+                        <select name="house_id">
+                        <option value="">所属仓库</option>
+                        {volist name='storehouse' id='vo'}
+                        <option value="{$vo.id}">{$vo.house_name}</option>
+                        {/volist}
+                        </select>
+                        </div>
+                        <div class="layui-inline layui-show-xs-block">
+                        <select name="category">
+                        <option value="">商品分类</option>
+                        {volist name='category' id='vo'}
+                        <option value="{$vo.id}">{$vo.level-1|str_repeat='丨--',###}{$vo.category_name}</option>
+                        {/volist}
+                        </select>
+                        </div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input type="text" name="goodsname" placeholder="请输入商品名" autocomplete="off" class="layui-input"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <a class="layui-btn lotus-search-btn" lay-submit="" lay-filter="search">
+                                <i class="layui-icon">&#xe615;</i></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-data="{page:true,limits:[20,50,100],loading:true,toolbar:'#toolbarDemo',url:'stocksListJson',hash:''}"  class="layui-table layui-hide" >
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'id', sort: true,width:'8%',align:'center'}">ID</th>
+                            <th lay-data="{field:'goodsname'}">商品名称</th>
+                            <th lay-data="{field:'unit',width:'6%'}">单位</th>
+                            <th lay-data="{field:'category_name',width:'8%'}">分类</th>
+                            <th lay-data="{field:'price',width:'10%',align:'center',templet:'#priceTpl'}">单价</th>
+                            <th lay-data="{field:'house_name',width:'10%',align:'center'}">仓库</th>
+                            <th lay-data="{field:'shop_name',width:'15%',align:'center'}">门店</th>
+                            <th lay-data="{field:'numbers',width:'6%',align:'center'}">数量</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <script type="text/html" id="priceTpl">
+                        <span>￥{{d.price.toFixed(2)}}</span>
+                    </script>
+                    <script type="text/html" id="toolbarDemo">
+                        <div class = "layui-btn-container" >
+                        </div >
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.lotus-search-btn').on('click',function () {
+        var where = {
+            category:$('select[name=category]').val(),
+            goodsname:$('input[name=goodsname]').val(),
+            house_id:$('select[name=house_id]').val(),
+        };
+        lotus.table(where);
+    })
+</script>
+{/block}

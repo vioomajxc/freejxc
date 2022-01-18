@@ -1,0 +1,57 @@
+{include file='pub/head'}
+<body>
+<form class="layui-form" lay-filter="lotus-form-filter" id="lotus-edit-form" action="payMent" method="post">
+<input type="hidden" name="or_id" value="{$or_id}">
+<input type="hidden" name="pay_type" value="cash">
+<input type="hidden" name="memberid" value="{$members.id}">
+<input type="hidden" name="pay_money" id="pay_money" value="{$money-$payed}">
+<div class="layui-row">
+    <table class="info_Table" width="100%">
+        <tr>
+            <th>订单号：</th>
+            <td style="color:#F00;">{$or_id}</td>
+        </tr>
+        <tr>
+            <th>会员名称：</th>
+            <td>{$members.member_name}</td>
+        </tr>
+        <tr>
+            <th>会员卡余额：</th>
+            <td>￥{$members.card_balance|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>订单金额：</th>
+            <td>￥{$allmoney|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>已付金额：</th>
+            <td>￥{$payed|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>折后金额：</th>
+            <td style="font:bold 14px Arial;color:#f00;">￥{$money-$payed|number_format=2}</td>
+        </tr>
+        <tr>
+            <th>会员卡号：</th>
+            <td>{$members.card_no}（享{$members.discount}折）</td>
+        </tr>
+        <tr>
+            <th>金额：</th>
+            <td><input type="text" class="layui-input" lay-verify="required" style="width:150px;" name="payed" id="payed" value="{$money-$payed}"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><button class="layui-btn" lay-submit lay-filter="toSubmit">结 账</button></td>
+        </tr>
+    </table>
+</div>
+</form>
+
+<script>
+    $('#payed').focus();
+</script>
+</body>
+{include file='pub/foot'}
+
+
+

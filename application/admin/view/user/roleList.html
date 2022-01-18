@@ -1,0 +1,40 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-data="{page:true,limits:[10,20,100],loading:true,toolbar:'#toolbarDemo',url:'RoleListJson',hash:''}"  class="layui-table layui-hide" >
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'title'}">角色</th>
+                            <th lay-data="{field:'status',templet:'#statusTpl'}">状态</th>
+                            <th lay-data="{'width':'120',field:'id',templet:'#actionTpl'}">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+                    <script type="text/html" id="toolbarDemo">
+                        <div class = "layui-btn-container" >
+                            <button class="layui-btn layui-btn-sm" onclick="xadmin.open('添加','addRole.html')"><i class="layui-icon"></i>添加</button>
+                        </div >
+                    </script>
+                    <script type="text/html" id="actionTpl">
+                        <button onclick="xadmin.open('授权','editRole.html?id={{d.id}}')" class="layui-btn layui-btn-xs">授权</button>
+                        <button onclick="lotus.del('{{d.id}}','delRole')" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
+                    </script>
+                    <script type="text/html" id="statusTpl">
+                        {{#  if(d.status==1){   }}
+                        <span class="layui-badge layui-bg-green">启用</span>
+                        {{# }else{ }}
+                        <span class="layui-badge">禁用</span>
+                        {{# } }}
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

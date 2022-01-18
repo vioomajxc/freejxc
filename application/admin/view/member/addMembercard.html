@@ -1,0 +1,93 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid lotus-form">
+    <div class="layui-row">
+        <form class="layui-form layui-form-pane" id="lotus-add-form" action="addMemberCard" method="post">
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    会员名称
+                </label>
+                <div class="layui-input-block">
+                    <input type="hidden"  name="member_id" lay-verify="required" autocomplete="off"  class="layui-input" value="{$member_id}"><span style="height:40px;line-height:40px;margin-left:20px;">{$mname}</span>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">会员卡号</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="card_no" lay-verify="required" class="layui-input" autofocus="autofocus" id="card_no">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">会员卡密</label>
+                <div class="layui-input-block">
+                    <input type="password"  name="card_pwd" lay-verify="required" class="layui-input" autofocus="autofocus">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">储值金额</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="card_money" lay-verify="required" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">赠送金额</label>
+                <div class="layui-input-block">
+                    <input type="text"  name="card_give" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">
+                    是否启用
+                </label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="status">
+                        <option value="1">启用</option>
+                        <option value="0">禁止</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">收款途径</label>
+                <div class="layui-input-block">
+                    <select lay-filter="aihao" name="channel">
+                        <option value="1">现金</option>
+                        <option value="2">微信</option>
+                        <option value="3">支付宝</option>
+                        <option value="4">银联</option>
+                        <option value="5">其它</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button style="margin-left: 30%" class="layui-btn" lay-submit="" lay-filter="toSubmit">提交</button>
+                    <button id="reset" type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+    $('#card_no').bind('keypress',function(event){
+            if(event.keyCode == "13"){
+                $('.card-money').focus();
+            }
+        });
+});
+    </script>
+{/block}
+
+
+
+

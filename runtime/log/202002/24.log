@@ -1,0 +1,111 @@
+---------------------------------------------------------------
+
+[2020-02-24T15:11:35+08:00] ::1 GET localhost:92/
+[运行时间：0.575417s] [吞吐率：1.74req/s] [内存消耗：2,045.94kb] [文件加载：68]
+[ info ] [ LANG ] D:\wamp\www\freejxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-user' => '?1',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
+  'host' => 'localhost:92',
+  'cookie' => 'pma_lang=zh_CN; Hm_lvt_ba47f58bf15593b02e85cf1c8756eb3b=1582003181,1582086428,1582351900; pmaUser-1=%7B%22iv%22%3A%22v3%2BH9NJsaQQyIrQWQp%5C%2FJaA%3D%3D%22%2C%22mac%22%3A%2226a082c5ce5fa6e97fe4523c2420323625a838a0%22%2C%22payload%22%3A%22rxDkjBjVZ1Vd7FCkF%5C%2FarfA%3D%3D%22%7D; PHPSESSID=q1dhk1mps3pi5tf2sv6p1s73sb',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2020-02-24T15:11:36+08:00] ::1 GET localhost:92/index/login/login.html
+[运行时间：0.232163s] [吞吐率：4.31req/s] [内存消耗：2,879.19kb] [文件加载：71]
+[ info ] [ LANG ] D:\wamp\www\freejxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/index/login/login.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-user' => '?1',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
+  'host' => 'localhost:92',
+  'cookie' => 'pma_lang=zh_CN; Hm_lvt_ba47f58bf15593b02e85cf1c8756eb3b=1582003181,1582086428,1582351900; pmaUser-1=%7B%22iv%22%3A%22v3%2BH9NJsaQQyIrQWQp%5C%2FJaA%3D%3D%22%2C%22mac%22%3A%2226a082c5ce5fa6e97fe4523c2420323625a838a0%22%2C%22payload%22%3A%22rxDkjBjVZ1Vd7FCkF%5C%2FarfA%3D%3D%22%7D; PHPSESSID=q1dhk1mps3pi5tf2sv6p1s73sb',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\freejxc\application\index\view\login\login.html [ array (
+  0 => 'site_config',
+) ]
+---------------------------------------------------------------
+
+[2020-02-24T15:11:36+08:00] ::1 GET localhost:92/favicon.ico
+[运行时间：0.092842s] [吞吐率：10.77req/s] [内存消耗：1,586.95kb] [文件加载：59]
+[ info ] [ LANG ] D:\wamp\www\freejxc\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+
+[2020-02-24T15:57:54+08:00] ::1 GET localhost:92/
+[运行时间：0.056047s] [吞吐率：17.84req/s] [内存消耗：2,046.95kb] [文件加载：68]
+[ info ] [ LANG ] D:\wamp\www\freejxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-user' => '?1',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
+  'host' => 'localhost:92',
+  'cookie' => 'pma_lang=zh_CN; Hm_lvt_ba47f58bf15593b02e85cf1c8756eb3b=1582003181,1582086428,1582351900; PHPSESSID=q1dhk1mps3pi5tf2sv6p1s73sb; phpMyAdmin=jr2msf8fg9e9livs3m25gvtv4s; pmaUser-1=%7B%22iv%22%3A%22ZxSCILtB5JbJYCUV82%2B0SQ%3D%3D%22%2C%22mac%22%3A%22c2c81ef8086fabdecefd685da335eaee15ad9dbb%22%2C%22payload%22%3A%22cHlV1%2BBAIlubiApgr7HgZQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22Z%2BEH3F7Mwxcpvmmbg%2BsUrQ%3D%3D%22%2C%22mac%22%3A%226384b5b41177ea865d16994dce646b44c68b44fc%22%2C%22payload%22%3A%22p9Es%2B9LfzttFmqD16Tgwfv8J4KPKPEnNHlcEXdIL%2BVw%3D%22%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2020-02-24T15:57:54+08:00] ::1 GET localhost:92/index/login/login.html
+[运行时间：0.069229s] [吞吐率：14.44req/s] [内存消耗：2,880.19kb] [文件加载：71]
+[ info ] [ LANG ] D:\wamp\www\freejxc\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'content-type' => '',
+  'content-length' => '0',
+  'x-original-url' => '/index/login/login.html',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-user' => '?1',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
+  'host' => 'localhost:92',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pma_lang=zh_CN; Hm_lvt_ba47f58bf15593b02e85cf1c8756eb3b=1582003181,1582086428,1582351900; PHPSESSID=q1dhk1mps3pi5tf2sv6p1s73sb; phpMyAdmin=jr2msf8fg9e9livs3m25gvtv4s; pmaUser-1=%7B%22iv%22%3A%22ZxSCILtB5JbJYCUV82%2B0SQ%3D%3D%22%2C%22mac%22%3A%22c2c81ef8086fabdecefd685da335eaee15ad9dbb%22%2C%22payload%22%3A%22cHlV1%2BBAIlubiApgr7HgZQ%3D%3D%22%7D; pmaAuth-1=%7B%22iv%22%3A%22Z%2BEH3F7Mwxcpvmmbg%2BsUrQ%3D%3D%22%2C%22mac%22%3A%226384b5b41177ea865d16994dce646b44c68b44fc%22%2C%22payload%22%3A%22p9Es%2B9LfzttFmqD16Tgwfv8J4KPKPEnNHlcEXdIL%2BVw%3D%22%7D',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\freejxc\application\index\view\login\login.html [ array (
+  0 => 'site_config',
+) ]

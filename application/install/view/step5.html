@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	{include file="public/head"}
+	<script src="/static/install/js/jquery.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<include file="public/header" />
+		<section class="section">
+			<div style="padding: 40px 20px;">
+				<div class="text-center">
+					<a style="font-size: 18px;">恭喜您，唯马进销存安装完成！</a>
+					<a style="font-size: 18px;">用户名: <span id="username"></span>  密码:<span class="password"></span>  </a>
+					<br>
+					<br>
+					<div class="alert alert-danger" style="width: 350px;display: inline-block;">
+						为了您站点的安全，安装完成后即可将网站app目录下的“install”文件夹删除!
+						另请对data/database.php文件做好备份，以防丢失！
+					</div>
+					<br>
+				<a class="btn btn-success" href="{:lotus_get_root()}/">进入前台</a>
+					<a class="btn btn-success" href="{:lotus_get_root()}/index.php?s=admin">进入后台</a>
+					<a class="btn btn-primary"  href="http://www.viooma.com" target="_blank" class="site-star">官方网站</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	{include file="public/footer"}
+</body>
+</html>

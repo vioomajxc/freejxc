@@ -1,0 +1,82 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="lotus-search-form layui-form layui-col-space5" method="get" action="selectgoodsListJson">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                            <select class="layui-select" name="contact" lay-filter="hc_select" autocomplete="off" lay-search>
+                        <option value="">选择供应商</option>
+                        {volist name='supplier' id='vo'}
+                            <option value="{$vo.id}">{$vo.supplier_name}</option>
+                        {/volist}
+                    </select>
+                        </div>
+                        </div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input type="text" name="goodsname" placeholder="请输入商品名" autocomplete="off" class="layui-input"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <a class="layui-btn lotus-search-btn" lay-submit="" lay-filter="search">
+                                <i class="layui-icon">&#xe615;</i></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-filter="lotus-table" lay-data="{page:true,limits:[20,50,100],loading:true,toolbar:'#toolbarTpl',url:'selectgoodsListJson?or_id={$or_id}',hash:''}"  class="layui-table layui-hide">
+                        <thead>
+                            <tr>
+                                <th lay-data="{field:'id',type:'checkbox',width:'6%'}"></th>
+                                <th lay-data="{field:'id', sort: true,width:'8%',align:'center'}">ID</th>
+                                <th lay-data="{field:'goodsname',width:'30%'}">商品名</th>
+                                <th lay-data="{field:'spec',width:'12%'}">规格</th>
+                                <th lay-data="{field:'unit',width:'10%'}">单位</th>
+                                <th lay-data="{field:'price',width:'10%'}">单价</th>
+                                <th lay-data="{field:'id',templet: '#actionTpl',width:'10%'}">选择</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <!--script type="text/html" id="toolbarTpl">
+                        <div class = "layui-btn-container" >
+                            <button class="layui-btn layui-btn-sm" lay-event="getCheckData"><i class="layui-icon"></i>选择并关闭</button>
+                        </div >
+                    </script-->
+                    <script type="text/html" id="actionTpl">
+                        <button onclick="selectSingle('{{d.id}}','{$or_id}','/index/index/selectsingleGoods')" class="layui-btn layui-btn-danger layui-btn-xs">选择</button>
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.lotus-search-btn').on('click',function () {
+        var where = {
+            start:$('input[name=start]').val(),
+            goods:$('input[name=goods]').val(),
+            end:$('input[name=end]').val(),
+        };
+        lotus.table(where);
+    });
+
+    function selectSingle(id,or_id,route){
+        $.ajax({
+                url: route,
+                type: 'post',
+                dataType: 'json',
+                data: {id:id,or_id:or_id},
+            })
+                .done(function(data){
+                    if(data.code==0){
+                        layer.msg(data.msg,{icon:5,time:500});
+                    }else{
+                            //lotus.parentTableReload();
+                            parent.layui.table.reload('posTable');
+                    }
+                })
+    }
+</script>
+{/block}

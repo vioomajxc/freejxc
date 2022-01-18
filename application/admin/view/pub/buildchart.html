@@ -1,0 +1,50 @@
+<link href="__SYSTEM__/frame/css/font-awesome.min.css?v=4.3.0" rel="stylesheet">
+<script src="__STATIC__/lib/echarts.common.min.js"></script>
+<script src="__STATIC__/lib/requirejs/require.js"></script>
+<link href="__SYSTEM__/frame/css/style.min.css?v=3.0.0" rel="stylesheet">
+<script src="__SYSTEM__/frame/js/bootstrap.min.js"></script>
+    <script>
+        window.controlle="report";
+        window.module="admin";
+    </script>
+
+<script>
+    var hostname = location.hostname;
+    if(location.port) hostname += ':' + location.port;
+    requirejs.config({
+        map: {
+            '*': {
+                'css': '__STATIC__/lib/requirejs/require-css.js'
+            }
+        },
+        shim:{
+            'iview':{
+                deps:['css!iviewcss']
+            },
+            'layer':{
+                deps:['css!layercss']
+            }
+        },
+        baseUrl:'//'+hostname+'/',
+        paths: {
+            'static':'static',
+            'system':'system',
+            'vue':'static/lib/vue/dist/vue.min',
+            'axios':'static/lib/axios.min',
+            'iview':'static/lib/iview/dist/iview.min',
+            'iviewcss':'static/lib/iview/dist/styles/iview',
+            'lodash':'static/lib/lodash',
+            'layer':'static/lib/layer/layer',
+            'layercss':'static/lib/layer/theme/default/layer',
+            'jquery':'static/lib/jquery/jquery.min',
+            'moment':'static/lib/moment',
+            'sweetalert':'static/lib/sweetalert2/sweetalert2.all.min'
+
+        },
+        basket: {
+            excludes:['system/js/index','system/util/mpVueComponent','system/util/mpVuePackage']
+//            excludes:['system/util/mpFormBuilder','system/js/index','system/util/mpVueComponent','system/util/mpVuePackage']
+        }
+    });
+</script>
+<script type="text/javascript" src="__SYSTEM__/util/mpFrame.js"></script>

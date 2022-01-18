@@ -1,0 +1,74 @@
+{extend name='pub/modal'}
+{block name='content'}
+<div class="layui-fluid layui-anim layui-anim-upbit" >
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <form class="lotus-search-form layui-form layui-col-space5" method="get" action="goodsListJson">
+                        <div class="layui-inline layui-show-xs-block">
+                            <input class="layui-input" autocomplete="off" placeholder="开始日" name="start" id="start"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input class="layui-input" autocomplete="off" placeholder="截止日" name="end" id="end"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <input type="text" name="goodsname" placeholder="请输入商品名" autocomplete="off" class="layui-input"></div>
+                        <div class="layui-inline layui-show-xs-block">
+                            <a class="layui-btn lotus-search-btn" lay-submit="" lay-filter="search">
+                                <i class="layui-icon">&#xe615;</i></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table id="lotus-table"  lay-data="{page:true,limits:[10,20,100],loading:true,toolbar:'#toolbarDemo',url:'goodsListJson',hash:''}"  class="layui-table layui-hide" >
+                        <thead>
+                            <tr>
+                                <th lay-data="{field:'id', width:80, sort: true}">ID</th>
+                                <th lay-data="{field:'goodsname',width:300}">商品名</th>
+                                <th lay-data="{field:'supplier_name'}">供应商</th>
+                                <th lay-data="{field:'unit'}">单位</th>
+                                <th lay-data="{field:'category_name'}">分类</th>
+                                <th lay-data="{field:'price'}">价格</th>
+                                <th lay-data="{field:'lead_time',templet:'#leadtimeTpl'}">日期</th>
+                                <th lay-data="{field:'status',templet:'#statusTpl'}">状态</th>
+                                <th lay-data="{field:'word'}">助记词</th>
+                                <th lay-data="{'width':'180',field:'id',width:180,templet: '#actionTpl'}">操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <script type="text/html" id="toolbarDemo">
+                        <div class = "layui-btn-container" >
+                            <button class="layui-btn layui-btn-sm" onclick="xadmin.open('添加商品','addGoods.html',720)"><i class="layui-icon"></i>添加</button>
+                        </div >
+                    </script>
+                    <script type="text/html" id="actionTpl">
+                        <button onclick="xadmin.open('编辑商品','editGoods.html?id={{d.id}}',720)" class="layui-btn layui-btn-xs">编辑</button>
+                        <button onclick="lotus.del('{{d.id}}','delGoods')" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
+                        <!--button onclick="xadmin.open('商品详情','desGoods.html?id={{d.id}}')" class="layui-btn layui-btn-success layui-btn-xs">详情</button-->
+                    </script>
+                    <script type="text/html" id="leadtimeTpl">
+                        <div>{{ layui.util.toDateString(d.create_time * 1000,"yyyy-MM-dd") }}</div>
+                    </script>
+                    <script type="text/html" id="statusTpl">
+                        {{#  if(d.status==1){  }}
+                        <span class="layui-badge layui-bg-green">可用</span>
+                        {{#  }else{  }}
+                        <span class="layui-badge">禁用</span>
+                        {{#  } }}
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.lotus-search-btn').on('click',function () {
+        var where = {
+            start:$('input[name=start]').val(),
+            goods:$('input[name=goods]').val(),
+            end:$('input[name=end]').val(),
+        };
+        lotus.table(where);
+    })
+</script>
+{/block}
